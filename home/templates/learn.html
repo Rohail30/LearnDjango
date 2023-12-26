@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'learn.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-container">
+        <div class="logo"><img src="{% static 'logo1.png' %}" alt="" /></div>
+        <div class="nav-bar">
+          <a href="http://127.0.0.1:8000/">Home</a>
+          <a href="http://127.0.0.1:8000/learn">Learn</a>
+          <a href="http://127.0.0.1:8000/about">About</a>
+          <a href="#">More</a>
+        </div>
+      </div>
+      <div class="learn">
+        <div class="djhead">
+          <h1>Welcome</h1>
+          <p>
+            Here you will learn basics of django. The followings are content of
+            what you can learn on this website
+          </p>
+          <ol>
+            <li><a href="#set-up">How to Setup Django</a></li>
+            <li><a href="#H-W">Hello World!</a></li>
+            <li><a href="#H">how to add html file in django project</a></li>
+            <!-- <li>how add css and js file in django project</li> -->
+          </ol>
+        </div>
+        <div class="djhead" id="set-up">
+          <h1>Setting up Django!</h1>
+          <p>
+            Setting up Django on your computer is a breeze! Just follow these
+            basic steps. However, make sure you have
+            <a
+              style="text-decoration: none; font-weight: bold; color: black"
+              href="https://www.python.org/downloads/"
+              >python</a
+            >
+            and
+            <a
+              style="text-decoration: none; font-weight: bold; color: black"
+              href="https://pypi.org/project/pip/"
+            >
+              pip</a
+            >
+            installed.
+            <br />
+            <br />
+            To check, type "python --version" and "pip --version." n command
+            prompt. Easy, right?<br /><br />
+            <img src="{% static 'py-version.png' %}" alt="" />
+            <br />
+            <br />
+            <img src="{% static 'pip-version.png' %}" alt="" />
+            <br />
+            <br />
+
+            First, create a folder with any name you like and place it wherever
+            you want. I'm choosing to name my folder "Django." Open your
+            terminal and move to the directory where you've set up your folder.
+            I have created on desktop. Alright, let's dive in. In the terminal,
+            please ignore the quotation marks and type the following commands:
+            <br>
+            <ol style="font-size: 1.5rem; font-weight: bold;">
+              <li>"python -m virtualenv env."
+                <br />
+                <img
+                  style="width: 800px"
+                  src="{% static 'virtual-env.png' %}"
+                  alt=""
+                /></li><br>
+                <li>"cd env/Scripts"<br><img
+                  src="{% static '2.png' %}"
+                  alt=""
+                /></li><br>
+                <li>"activate"<br><img src="{% static '3.png' %}" alt=""></li><br>
+                <li>"pip install django"<br><img style="width: 800px" src="{% static '4.png' %}" alt=""></li><br>
+                <li>"python", "import django", "django.__version__", "ctr z"<br><img style="width: 800px" src="{% static '5.png' %}" alt=""></li><br>
+                <li>Now go back to the folder. "cd ..", "cd .."<br><img src="{% static '6.png' %}" alt=""></li><br>
+                <li>"django-admin startproject MyDjangoProject", "cd MyDjangoProject", "python manage.py startapp home"<br>
+                <img style="width: 800px" src="{% static '7.png' %}" alt=""></li><br>
+                <li>This is just open your project folder in VS Code. you can skip this step and open your project manualy. "code ."<br>
+                <img src="{% static '8.png' %}" alt=""><br><img src="{% static '8.1.png' %}" alt=""></li><br>
+                <li>Finally, to start server. "python manage.py runserver"<br><img style="width: 800px" src="{% static '9.png' %}" alt=""></li>
+            </ol>  
+            <br>
+            <br>
+            Here's how the starting page of a Django project looks. If you've followed the steps correctly, you should see the same output.
+            <br>
+            <br>
+            <img style="width: 800px;border: 2px solid black;" src="{% static 'rendering.png' %}" alt="">
+          </p>
+        </div>
+        <div class="djhead" id="H-W">
+          <h1>Render "Hello world!" on your localhost</h1>
+          <p>
+            To render "Hello World!" you need to edit "views.py" in your home folder and, "settings.py" and "urls.py" in MyDjangoProject.
+          </p>
+          <br>
+          <ol style="font-size: 1.5rem; font-weight: bold;">
+              <li>First in your "settings.py" file add 'home' in INSTALLED_APP<br><img style="width: 800px" src="{% static '10.png' %}" alt=""></li><br>
+              <li>Add following code in "views.py"<br><img style="width: 800px" src="{% static '11.png' %}" alt=""></li><br>
+              <li>Add following code in "urls.py"<br><img style="width: 800px" src="{% static '12.png' %}" alt=""></li><br>
+              <li>Check your localhost!<br><img src="{% static '13.png' %}" alt=""></li><br>
+          </ol>  
+        </div>
+        <div class="djhead" id="H">
+          <h1>Add HTML file in your django project</h1>
+          <p>
+            To add and render html file in your Django Project, follow these steps
+          </p>
+          <br>
+          <ol style="font-size: 1.5rem; font-weight: bold;">
+              <li>Make subfolders in your home directory with the name templates and home. Make three html files<br><img src="{% static '14.png' %}" alt=""></li><br>
+              <li>Add the following html code in index.html: <br><img style="width: 800px" src="{% static '22.png' %}" alt=""></li><br>
+              <li>Add the following html code in about.html: <br><img style="width: 800px" src="{% static '20.png' %}" alt=""></li><br>
+              <li>Add the following html code in contact.html: <br><img style="width: 800px" src="{% static '21.png' %}" alt=""></li><br>
+              <li>Add following code in "views.py"<br><img style="width: 800px" src="{% static '15.png' %}" alt=""></li><br>
+              <li>Give path to each html file in "urls.py"<br><img style="width: 800px" src="{% static '24.png' %}" alt=""></li><br>
+              <li>Check your localhost!<br><img src="{% static '17.png' %}" alt=""></li><br><img src="{% static '18.png' %}" alt=""></li><br><img src="{% static '19.png' %}" alt=""></li><br>
+          </ol> 
+        </div>
+      </div>
+      <div class="foot-container">
+        <div class="footer">
+          <p>Copyright © 2023</p>
+          <div class="icons">
+            <i class="devicon-facebook-plain"></i> 
+            <i class="devicon-github-original"></i>              
+            <i class="devicon-linkedin-plain"></i>              
+            <i class="devicon-codepen-plain"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
